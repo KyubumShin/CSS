@@ -1,15 +1,24 @@
-.wrapper{
+.father {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  align-items: stretch;
-  height: 200vh;
+  height: 100vh;
+  align-content: flex-start;
 }
 
-
-.box{
-  width : 200px;
-  height: 200px;
+.child {
+  flex-basis: 300px;
   background: peru;
-  color : white;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.child:nth-child(2) {
+  background: black;
+  flex-grow: 1;
+}
+
+.child:nth-child(3) {
 }
