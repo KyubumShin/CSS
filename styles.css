@@ -1,24 +1,23 @@
-.father {
-  display: flex;
-  justify-content: space-around;
-  height: 100vh;
-  align-content: flex-start;
+.grid {
+  color : white;
+  display: grid;
+  gap: 5px;
+  grid-auto-rows: 100px;
+  margin-bottom: 30px;
 }
 
-.child {
-  flex-basis: 300px;
-  background: peru;
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+.grid:first-child{
+  grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
 }
 
-.child:nth-child(2) {
-  background: black;
-  flex-grow: 1;
+.grid:last-child{
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
 }
 
-.child:nth-child(3) {
+.item:nth-child(even){
+  background: rgb(30, 205, 100);
+}
+
+.item:nth-child(odd){
+  background: rgb(18, 228, 220);
 }
